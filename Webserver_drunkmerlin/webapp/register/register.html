@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Drunk Sally</title>
+		<style>
+
+		@media (max-width: 400px) {
+			.banner {
+				width: 90%;
+				margin: 0 auto;
+				text-align: center;
+				-webkit-appearance: none;
+			}
+			.login-form{
+				width: 90%;
+				margin: 0 auto;
+				font-family: Tahoma, Geneva, sans-serif;
+				-webkit-appearance: none;
+			}
+		}
+
+		@media (min-width: 401px) {
+			.banner {
+				width: 50%;
+				margin: 0 auto;
+				text-align: center;
+				-webkit-appearance: none;
+			}
+			.login-form{
+				width: 50%;
+				margin: 0 auto;
+				font-family: Tahoma, Geneva, sans-serif;
+				-webkit-appearance: none;
+			}
+		}
+
+
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+			-webkit-appearance: none;
+		}
+		.login-form input[type="password"],
+    .login-form input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+			-webkit-appearance: none;
+		}
+    .login-form input[type="email"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+			-webkit-appearance: none;
+		}
+		.login-form input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			margin: 2px;
+			-webkit-appearance: none;
+		}
+		.btn{
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			margin: 2px;
+			-webkit-appearance: none;
+		}
+		</style>
+
+		<link rel="shortcut icon" type="image/x-icon" href="/static/Bilder/icon-web.ico">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	</head>
+	<body>
+		<script>
+			var vergeben = location.search.split('vergeben=')[1];
+			if(vergeben == '1'){
+				alert("Username oder Email bereits vergeben");
+			}
+			/*var x = "Total Width: " + screen.width;
+			var y = "Total Width: " + screen.height;
+			alert(x + " " + y);
+			*/
+		</script>
+
+
+
+		<div class="login-form">
+
+			<form action="/register/auth" method="POST">
+				<input type="text" name="username" placeholder="Username" required>
+        <input type="text" name="vorname" placeholder="Vorname" required>
+        <input type="text" name="nachname" placeholder="Nachname" required>
+        <input type="email" name="email" placeholder="Email" required>
+				<input type="text" name="password" placeholder="Passwort" required>
+			</br>
+				<input type="submit" value="Registrieren">
+			</form>
+		</div>
+
+
+
+	</body>
+</html>

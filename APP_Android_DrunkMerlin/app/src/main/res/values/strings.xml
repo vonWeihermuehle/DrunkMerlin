@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">DrunkMerlin</string>
+
+    <string name="title_activity_login" translatable="false">DrunkMerlin</string>
+    <string name="title_activity_karte" translatable="false">Map</string>
+
+    <string name="hint_drink" translatable="true">Name des Getränks</string>
+    <string name="hint_menge" translatable="true">Menge</string>
+    <string name="hint_percentage" translatable="true">Prozent</string>
+    <string name="hint_time" translatable="true">Zeit</string>
+
+
+    <string name="btn_trinken" translatable="true">Trinken</string>
+
+    <string name="Scannen" translatable="true">Scannen</string>
+    <string name="danke_text">Danke an die Künstler/Photografen, die die Bilder zur Verfügung stellen:</string>
+    <string name="hint_gewicht">Gewicht</string>
+    <string name="hint_geschlecht">Geschlecht</string>
+    <string name="txt_offline_modus">Offline Modus</string>
+    <string name="txt_abmelden">Abmelden</string>
+    <string name="txt_speichern">Speichern</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_register">Registrieren</string>
+    <string name="hint_username">Benutzername</string>
+    <string name="hint_password">Passwort</string>
+    <string name="btn_bar">Zur Bar</string>
+    <string name="btn_uebersicht">Zur Übersicht</string>
+    <string name="btn_challenge">Challenge</string>
+    <string name="txt_hat_bereits_account">Du hast bereits einen Account?</string>
+    <string name="btn_alles_loeschen">Alles löschen</string>
+    <string name="txt_lass_den_code_scannen">Lass deinen Code von Freunden scannen</string>
+    <string name="txt_englisch">English</string>
+    <string name="title_warnung">Warnung</string>
+    <string name="Warnung">Benutzen Sie dieses Tool nicht dazu, um zu entscheiden, ob Sie noch ein Fahrzeug führen dürfen oder nicht. DrunkMerlin liefert ungefähre Werte für gesunde Erwachsene. Eine genaue Berechnung der Blutalkoholkonzentration ist abhängig von der Menge, Dauer und der zeitlichen Verteilung des Alkoholkonsums sowie individuellen physiologischen Merkmalen. Krankheiten oder Medikamenteneinnahme können die Blutalkoholkonzentration ebenfalls beeinflussen.</string>
+    <string name="text_warnung_speichern">Es muss ein Gewicht und ein Geschlecht angegeben werden.</string>
+    <string name="Sex_M">männlich</string>
+    <string name="Sex_W">weiblich</string>
+    <string name="txt_und">und</string>
+    <string name="txt_wieder_nuechtern">wieder nüchtern</string>
+    <string name="txt_hab_anscheinend">Hab anscheinend</string>
+    <string name="txt_alkohol_im_blut">Alkohol im Blut</string>
+    <string name="txt_schau_die_app_an">Schau dir mal die App an!</string>
+    <string name="btn_Fertig">Fertig</string>
+    <string name="btn_abbrechen">Abbrechen</string>
+    <string name="txt_zuruecksetzen">Zurücksetzen?</string>
+    <string name="txt_der_komplette_alkohol_ist_weg">Es scheint als wäre der Alkohol komplett verdaut. Am besten starten wir wieder von Neuem.</string>
+    <string name="txt_noch_nicht">Noch nicht</string>
+    <string name="txt_alles_loeschen">Wollen Sie alles bisher Getrunkene löschen?</string>
+    <string name="txt_entfernen">entfernt werden</string>
+    <string name="txt_von_freundesliste_entfernen">von der Freundesliste entfernt werden?</string>
+    <string name="txt_soll">Soll</string>
+    <string name="title_teilen">Teilen?</string>
+    <string name="txt_teilen">Dir scheint die App zu gefallen. Willst du deine Freunde daran teilhaben lassen?</string>
+    <string name="txt_nie">Nie!</string>
+    <string name="btn_zurueck">Zurück</string>
+    <string name="txt_ihavenever">Ich hab noch nie ...</string>
+    <string name="title_send">Abschicken?</string>
+    <string name="txt_nachricht_senden1">Willst du die Frage an</string>
+    <string name="txt_nachricht_senden2">senden?</string>
+    <string name="txt_deleteAccount">Account Löschen</string>
+    <string name="txt_account_loeschen">Willst du deinen Account und alle dazugehörigen Daten unwiederruflich löschen?</string>
+</resources>

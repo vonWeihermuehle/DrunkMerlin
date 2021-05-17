@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/qr_code"
+        android:icon="@drawable/qr_code_white"
+        android:title="QR Code" />
+
+    <item
+        android:id="@+id/scan"
+        android:icon="@drawable/scan_white"
+        android:title="@string/Scannen"
+        android:iconTint="@color/white"/>
+
+    <item
+        android:id="@+id/map"
+        android:icon="@drawable/location"
+        android:title="Map"
+        android:iconTint="@color/white"/>
+
+</menu>

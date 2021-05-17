@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Drunk Sally</title>
+		<style>
+
+			@font-face {
+				font-family: 'customFont';
+      	src: url('/static/font/font1.ttf') format('truetype');
+			}
+
+      @media (max-width: 400px) {
+        body{
+          background-image: url("/static/Bilder/bg2.jpg");
+          background-size: cover;
+          color: white;
+          font-family: customFont;
+          -webkit-appearance: none;
+        }
+
+        .main{
+          float: left;
+          overflow: hidden;
+          height: 100%;
+          position: fixed;
+					width: 95%;
+          -webkit-appearance: none;
+        }
+
+        .banner{
+          width: 100%;
+          height: 20%;
+          overflow: hidden;
+          -webkit-appearance: none;
+        }
+
+
+        .list{
+          width: 95%;
+          height: 60%;
+          overflow: auto;
+          -webkit-appearance: none;
+        }
+
+        .button{
+          width: 100%;
+          height: 10%;
+          text-align:center;
+          -webkit-appearance: none;
+        }
+
+        .btn{
+          border-radius: 0px;
+          font-family: customFont;
+          color: #ffffff;
+          font-size: 20px;
+          background: #000000;
+          padding: 10px 20px 10px 20px;
+          border: solid #ffffff 2px;
+          text-decoration: none;
+          -webkit-appearance: none;
+        }
+        .btn:hover{
+          background: #ffffff;
+          text-decoration: none;
+          color: #000000;
+          -webkit-appearance: none;
+        }
+
+        .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          -webkit-appearance: none;
+        }
+
+        .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+          -webkit-appearance: none;
+        }
+
+        .sidenav a:hover {
+          color: #f1f1f1;
+          -webkit-appearance: none;
+        }
+
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 45px;
+          margin-left: 50px;
+          -webkit-appearance: none;
+        }
+
+        .icon{
+          height: 25px;
+          -webkit-appearance: none;
+        }
+
+				.spinner-item{
+					border-radius: 0px;
+          font-family: customFont;
+          color: #ffffff;
+          font-size: 20px;
+          background: #000000;
+          padding: 10px 20px 10px 20px;
+          border: solid #ffffff 2px;
+          text-decoration: none;
+					width: 80%;
+					z-index: 2;
+          -webkit-appearance: none;
+				}
+
+				.spinner-show{
+					display: block!important;
+          -webkit-appearance: none;
+				}
+
+				.spinner-content{
+					text-decoration: none;
+					display: none;
+					z-index: 10;
+					position: absolute;
+					width: 100%;
+          -webkit-appearance: none;
+				}
+
+				.center{
+					text-align: center;
+					width: 100%;
+          -webkit-appearance: none;
+				}
+
+				.promille{
+					text-align: right;
+          -webkit-appearance: none;
+				}
+				.zeit{
+					text-align: right;
+          -webkit-appearance: none;
+				}
+
+				.drink{
+					width: 100%;
+					float: left;
+					z-index: 1;
+          font-size: 30px;
+          -webkit-appearance: none;
+				}
+				.drink-name{
+					text-align: left;
+          -webkit-appearance: none;
+				}
+				.drink-zeit{
+					text-align: right;
+          -webkit-appearance: none;
+				}
+
+        .navspan{
+          font-size:40px;
+          cursor:pointer;
+          position: absolute;
+          -webkit-appearance: none;
+        }
+
+
+
+      }
+
+      @media (min-width: 401px) {
+        body{
+          background-image: url("/static/Bilder/bg.jpg");
+          background-size: cover;
+          color: white;
+          font-family: customFont;
+          -webkit-appearance: none;
+        }
+
+        .main{
+          float: left;
+          overflow: hidden;
+          height: 100%;
+          position: fixed;
+					width: 80%;
+          -webkit-appearance: none;
+        }
+
+        .banner{
+          width: 100%;
+          height: 20%;
+          overflow: hidden;
+          font-size: 25px;
+          -webkit-appearance: none;
+        }
+
+
+        .list{
+          width: 95%;
+          height: 60%;
+          overflow: auto;
+          -webkit-appearance: none;
+        }
+
+        .button{
+          width: 100%;
+          height: 10%;
+          text-align:center;
+          -webkit-appearance: none;
+        }
+
+        .btn{
+          border-radius: 0px;
+          font-family: customFont;
+          color: #ffffff;
+          font-size: 45px;
+          background: #000000;
+          padding: 10px 20px 10px 20px;
+          border: solid #ffffff 2px;
+          text-decoration: none;
+          -webkit-appearance: none;
+        }
+        .btn:hover{
+          background: #ffffff;
+          text-decoration: none;
+          color: #000000;
+          -webkit-appearance: none;
+        }
+
+        .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: #111;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          -webkit-appearance: none;
+        }
+
+        .sidenav a {
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          font-size: 45px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+          -webkit-appearance: none;
+
+        }
+
+        .sidenav a:hover {
+          color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+          -webkit-appearance: none;
+        }
+
+        .icon{
+          height: 25px;
+        }
+
+				.spinner-item{
+					border-radius: 0px;
+          font-family: customFont;
+          color: #ffffff;
+          font-size: 45px;
+          background: #000000;
+          padding: 10px 20px 10px 20px;
+          border: solid #ffffff 2px;
+          text-decoration: none;
+					width: 80%;
+					z-index: 2;
+          -webkit-appearance: none;
+				}
+
+				.spinner-show{
+					display: block!important;
+          -webkit-appearance: none;
+				}
+
+				.spinner-content{
+          text-align: center;
+					text-decoration: none;
+					display: none;
+					z-index: 10;
+					width: 100%;
+          -webkit-appearance: none;
+				}
+
+				.center{
+					text-align: center;
+					width: 100%;
+
+				}
+
+				.promille{
+					text-align: right;
+          -webkit-appearance: none;
+				}
+				.zeit{
+					text-align: right;
+          -webkit-appearance: none;
+				}
+
+				.drink{
+					width: 100%;
+					float: left;
+					z-index: 1;
+          font-size: 45px;
+          -webkit-appearance: none;
+				}
+				.drink-name{
+					text-align: left;
+          -webkit-appearance: none;
+				}
+				.drink-zeit{
+					text-align: right;
+          -webkit-appearance: none;
+				}
+
+        .navspan{
+          font-size:60px;
+          cursor:pointer;
+          position: absolute;
+          -webkit-appearance: none;
+        }
+
+
+
+
+      }
+
+		</style>
+
+		<link rel="shortcut icon" type="image/x-icon" href="/static/Bilder/icon-web.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	</head>
+	<body onload="reload()">
+		<script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "80%";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+
+			function showSpinner(){
+				var x = document.getElementById("Spinner");
+			  if (x.className.indexOf("spinner-show") == -1) {
+			    x.className += " spinner-show";
+			  } else {
+			    x.className = x.className.replace(" spinner-show", "");
+			  }
+			}
+
+			function setItem(item){
+				var x = document.getElementById("Spinner");
+				document.getElementById("btn-spinner").value = item;
+				x.className = x.className.replace(" spinner-show", "");
+			}
+
+			function neu(){
+        //confirm("test");
+        var r = confirm("Alles auf Anfang? alles Getrunkene und deine Promille werden auf 0 gesetzt.");
+        if (r == true) {
+          window.location.href = "/reset/drink";
+        } else {
+          //do nothing
+        }    
+        
+			}
+
+			function addDrink(){
+				//alert("add");
+				//var encodedString = btoa(str);
+				window.location.href = "/sally/add?drink="+btoa(document.getElementById("btn-spinner").value);
+			}
+
+			function reload(){
+        //location.reload();
+        setTimeout(function(){location.reload();},30000);//30 secs
+			}
+
+			function deleteDrink(id){
+				//alert("delete " + id);
+				window.location.href = "/sally/delete?id="+id;
+			}
+
+      function afterItem(){
+        window.location.href = "/sally/nachtragen";
+        
+      }
+
+      function addItem(){
+        window.location.href = "/sally/addItem";
+      }
+		</script>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!--<img class="icon" src="/static/Bilder/notizblock.png"><a href="#">Scoreboard</a>
+      <a href="#">Challenge</a>
+      <hr />-->
+      <a href="/scoreboard">Scoreboard</a>
+      <a href="/about">Über</a>
+      <hr />
+      <a href="/login/logout">Logout</a>
+      <a href="/setting">Einstellungen</a>
+      <a href="/dsgvo">Datenschutz</a>
+    </div>
+
+
+    <div class="main">
+
+
+      <div class="banner">
+        <span class="navspan" onclick="openNav()">&#9776;</span>
+        <h1 class="promille"><%= promille %>‰</h1>
+        <h2 class="zeit"><%= zeit %></h2>
+      </div>
+
+			<div class="center">
+				<input id="btn-spinner" type="button" value="Auswahl" onclick="showSpinner()" class="btn" style="width: 60%">
+        <input type="button" value="+" onclick="addDrink()" class="btn">
+
+          <div id="Spinner" class="spinner-content">
+            <li class="spinner-item" onclick="setItem('0.5(L) Bier (5%)')">0.5(L) Bier (5%)</li>
+            <li class="spinner-item" onclick="setItem('0.02(L) Shot (40%)')">0.02(L) Shot (40%)</li>
+            <li class="spinner-item" onclick="setItem('0.1(L) Wein (11%)')">0.1(L) Wein (11%)</li>
+            <%- items %>
+            <li class="spinner-item" onclick="addItem()">Getränk hinzufügen</li>
+            <li class="spinner-item" onclick="afterItem()">Getränk nachtragen</li>
+          </div>
+
+			</div>
+
+      <div class="list">
+<!--
+				<div class="drink">
+					<div class="drink-name">Wein</div>
+					<div class="drink-zeit">13.10.2019 14:21 Uhr</div>
+				</div>
+-->
+
+<%- input %>
+
+
+      </div>
+
+      <div class="button">
+        <input type="button" class="btn" value="Neu Beginnen" onclick="neu()">
+      </div>
+
+    </div>
+
+
+	</body>
+</html>

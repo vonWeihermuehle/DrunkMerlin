@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Drunk Sally</title>
+		<style>
+
+		@media (max-width: 400px) {
+      body{
+        background-image: url("/static/Bilder/bg2.jpg");
+        background-size: cover;
+        color: white;
+        font-family: customFont;
+        text-decoration: none;
+      }
+
+      .absatz{
+        background-color: black;
+        border-style: solid;
+        border-color: white;
+        border-width: 2px;
+        padding: 5px;
+      }
+
+      .btn{
+        border-radius: 0px;
+        font-family: customFont;
+        color: #ffffff;
+        font-size: 20px;
+        background: #000000;
+        padding: 10px 20px 10px 20px;
+        border: solid #ffffff 2px;
+        text-decoration: none;
+      }
+      .btn:hover{
+        background: #ffffff;
+        text-decoration: none;
+        color: #000000;
+      }
+
+      .btn-div{
+        position: fixed;
+        text-align: center;
+        width: 100%;
+      }
+
+      a:link{
+        text-decoration: none;
+        color: white;
+      }
+		}
+
+
+
+
+		}
+		</style>
+
+		<link rel="shortcut icon" type="image/x-icon" href="/static/Bilder/icon-web.ico">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	</head>
+	<body>
+		<script>
+			var vergeben = location.search.split('vergeben=')[1];
+			if(vergeben == '1'){
+				alert("Username oder Email bereits vergeben");
+			}
+			/*var x = "Total Width: " + screen.width;
+			var y = "Total Width: " + screen.height;
+			alert(x + " " + y);
+			*/
+		</script>
+
+
+    <p class="absatz">
+      Wer sind wir?
+      </br>
+      Im Prinzip sind wir zwei ganz normale Jungs. Die gerne mal Feiern gehen. Im Verlaufe unseres Studiums haben wir durchaus die ein oder andere Situation erlebt. An denen eigene Grenzen überschritten wurden. Dennoch sind wir dem Alkohol stets treu geblieben. Die Angst, dass wir zu gewissen Anlässen zu nüchtern sein könnten brachte uns auf die Idee diese App zu kreiren.
+    </p>
+
+    <p class="absatz">
+      Mehr Infos?
+      </br>
+      Im Internet unter <a href="drunk-sally.mb-media.net">drunk-sally.mb-media.net</a>
+    </p>
+
+    <p class="absatz">
+      Impressum
+      </br>
+      Im Internet unter <a href="drunk-sally.mb-media.net/Impressum">Impressum</a>
+    </p>
+
+    <div class="btn-div">
+      <a href="../"><input type="button" value="Fertig" class="btn"></a>
+    </div>
+
+
+
+	</body>
+</html>

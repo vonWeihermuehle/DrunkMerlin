@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Drunk Sally</title>
+		<style>
+
+			@font-face {
+				font-family: 'customFont';
+            	src: url('/static/font/font1.ttf') format('truetype');
+			    }
+
+            @media (max-width: 400px) {
+                body{
+                background-image: url("/static/Bilder/bg2.jpg");
+                background-size: cover;
+                color: white;
+                font-family: customFont;
+                -webkit-appearance: none;
+                }
+
+                .main{
+                float: left;
+                overflow: hidden;
+                height: 100%;
+                position: fixed;
+                            width: 95%;
+                -webkit-appearance: none;
+                }
+
+                .list{
+                width: 95%;
+                height: 90%;
+                overflow: auto;
+                -webkit-appearance: none;
+                }
+
+                .button{
+                width: 100%;
+                height: 10%;
+                text-align:center;
+                -webkit-appearance: none;
+                }
+
+                .btn{
+                border-radius: 0px;
+                font-family: customFont;
+                color: #ffffff;
+                font-size: 20px;
+                background: #000000;
+                padding: 10px 20px 10px 20px;
+                border: solid #ffffff 2px;
+                text-decoration: none;
+                -webkit-appearance: none;
+                }
+                .btn:hover{
+                background: #ffffff;
+                text-decoration: none;
+                color: #000000;
+                -webkit-appearance: none;
+                }
+
+				.center{
+					text-align: center;
+					width: 100%;
+                    -webkit-appearance: none;
+				}
+
+				.promille{
+					text-align: right;
+                    -webkit-appearance: none;
+				}
+				.promille{
+					text-align: right;
+                    -webkit-appearance: none;
+				}
+
+				.user{
+					width: 100%;
+					float: left;
+					z-index: 1;
+                    font-size: 30px;
+                    -webkit-appearance: none;
+				}
+				.user-name{
+					text-align: left;
+                    -webkit-appearance: none;
+				}
+				.user-promille{
+					text-align: right;
+                    -webkit-appearance: none;
+				}
+
+
+
+
+            }
+
+      @media (min-width: 401px) {
+        body{
+          background-image: url("/static/Bilder/bg.jpg");
+          background-size: cover;
+          color: white;
+          font-family: customFont;
+          -webkit-appearance: none;
+        }
+
+        .main{
+            float: left;
+            overflow: hidden;
+            height: 100%;
+            position: fixed;
+            width: 60%;
+            margin: auto;
+            text-align: center;
+            border-color: red;
+            border-width: 3px;
+            border: solid;
+            -webkit-appearance: none;
+        }
+
+        .list{
+          width: 95%;
+          height: 90%;
+          overflow: auto;
+          -webkit-appearance: none;
+        }
+
+        .button{
+          width: 100%;
+          height: 10%;
+          text-align:center;
+          -webkit-appearance: none;
+        }
+
+        .btn{
+          border-radius: 0px;
+          font-family: customFont;
+          color: #ffffff;
+          font-size: 45px;
+          background: #000000;
+          padding: 10px 20px 10px 20px;
+          border: solid #ffffff 2px;
+          text-decoration: none;
+          -webkit-appearance: none;
+        }
+        .btn:hover{
+          background: #ffffff;
+          text-decoration: none;
+          color: #000000;
+          -webkit-appearance: none;
+        }
+
+		.center{
+            text-align: center;
+            width: 100%;
+         }
+        .promille{
+            text-align: right;
+            -webkit-appearance: none;
+        }
+
+        .user{
+             width: 100%;
+            float: left;
+            z-index: 1;
+            font-size: 45px;
+             -webkit-appearance: none;
+        }
+        .user-name{
+            text-align: left;
+             -webkit-appearance: none;
+        }
+        .user-promille{
+            text-align: right;
+              -webkit-appearance: none;
+            }
+
+
+
+
+
+
+      }
+
+		</style>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/static/Bilder/icon-web.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	</head>
+	<body onload="reload()">
+		<script>
+            function reload(){
+            //location.reload();
+            setTimeout(function(){location.reload();},10000);//30 secs
+			}
+
+		</script>
+
+
+
+    <div class="main">
+
+
+      <div class="list">
+
+        <div class="user">
+            <div class="user-name">Max</div>
+            <div class="user-promille">3‰</div>
+        </div>
+
+      </div>
+
+      <div class="button">
+        <input type="button" class="btn" value="Zurück" onclick="back()">
+      </div>
+
+    </div>
+
+
+	</body>
+</html>

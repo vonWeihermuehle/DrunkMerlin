@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Drunk Sally</title>
+		<style>
+
+		@media (max-width: 400px) {
+			.banner {
+				width: 90%;
+				margin: 0 auto;
+				text-align: center;
+				-webkit-appearance: none;
+			}
+			.login-form{
+				width: 90%;
+				margin: 0 auto;
+				font-family: Tahoma, Geneva, sans-serif;
+				-webkit-appearance: none;
+			}
+		}
+
+		@media (min-width: 401px) {
+			.banner {
+				width: 50%;
+				margin: 0 auto;
+				text-align: center;
+				-webkit-appearance: none;
+			}
+			.login-form{
+				width: 50%;
+				margin: 0 auto;
+				font-family: Tahoma, Geneva, sans-serif;
+				-webkit-appearance: none;
+			}
+		}
+
+
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+			-webkit-appearance: none;
+		}
+		.login-form input[type="password"],
+    .login-form input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+			-webkit-appearance: none;
+		}
+    .login-form input[type="email"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+			-webkit-appearance: none;
+		}
+		.login-form input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			margin: 2px;
+			-webkit-appearance: none;
+		}
+
+        .login-form input[type="range"] {
+			width: 100%;
+
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			margin: 2px;
+            cursor: pointer;
+			-webkit-appearance: none;
+		}
+
+
+		.btn{
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			margin: 2px;
+			-webkit-appearance: none;
+		}
+		</style>
+
+		<link rel="shortcut icon" type="image/x-icon" href="/static/Bilder/icon-web.ico">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	</head>
+	<body onload="updateProzent()">
+		<script>
+			var vergeben = location.search.split('vergeben=')[1];
+			if(vergeben == '1'){
+				alert("Username oder Email bereits vergeben");
+			}
+			/*var x = "Total Width: " + screen.width;
+			var y = "Total Width: " + screen.height;
+			alert(x + " " + y);
+            */
+            
+            function hilfe(){
+                var text ="An der Stelle fragt man sich natürlich wie viel Prozent Alkohol sind denn in den verschiedenen Cocktails und Getränken enthalten. \n\n Der Profi überprüft erstmal das Etikett :) Hier sind meistens schon ein paar Hinweiße gegeben. \n\nAber mal im Ernst... \nIn einem Standard-Cocktail sind ca. 6-8% Alkohol enthaltn. Bei einem Mojito sind es ca. 20% und bei nem Caipirinha ca. 30%";
+                alert(text);
+            }
+
+            
+
+            function updateProzent(){
+                var slider = document.getElementById("range");
+                var output = document.getElementById("prozent");
+                output.value = "Prozent Alkohol: " + slider.value + "%";
+            }
+
+            function validate(evt) {
+                var theEvent = evt || window.event;
+
+                // Handle paste
+                if (theEvent.type === 'paste') {
+                    key = event.clipboardData.getData('text/plain');
+                } else {
+                // Handle key press
+                    var key = theEvent.keyCode || theEvent.which;
+                    key = String.fromCharCode(key);
+                }
+                var regex = /[0-9]|\./;
+                if( !regex.test(key) ) {
+                    theEvent.returnValue = false;
+                    if(theEvent.preventDefault) theEvent.preventDefault();
+                }
+            }
+
+
+		</script>
+
+
+
+		<div class="login-form">
+
+			<form action="/sally/addItem" method="POST">
+				<input type="text" name="name" placeholder="Name" required>
+                <input type="text" name="menge" placeholder="Menge (in L)" onkeypress="validate(event)" required>
+                <input type="text" id="prozent" name="prozent" placeholder="Prozent" required>
+                <input type="range" id="range" name="prozentslider" min="0.0" max="50.0" step="0.5" oninput="updateProzent()">
+            </br></br></br></br></br>
+                <input type="button" class="btn" value="Hilfe" onclick="hilfe()">
+                <input type="submit" value="Speichern">
+                <a href="/sally"><input type="button" class="btn" value="Abbrechen"></a>
+			</form>
+		</div>
+
+
+
+	</body>
+</html>

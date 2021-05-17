@@ -1,0 +1,42 @@
+CREATE TABLE nutzer
+(
+   id           VARCHAR(50)   NOT NULL,
+   username     VARCHAR(50)   NOT NULL,
+   hash         VARCHAR(50)   NOT NULL,
+   registriert  DATETIME
+);
+
+CREATE TABLE promille
+(
+   nutzer_id  VARCHAR(50)   NOT NULL,
+   promille   VARCHAR(50)
+);
+
+CREATE TABLE freunde
+(
+   nutzer_id  VARCHAR(50)   NOT NULL,
+   freund_id  VARCHAR(50)   NOT NULL
+);
+CREATE UNIQUE INDEX freund_index
+   ON freunde (nutzer_id ASC, freund_id ASC);
+
+CREATE TABLE drink
+(
+   id         INT           NOT NULL AUTO_INCREMENT,
+   nutzer_id  VARCHAR(50),
+   name       VARCHAR(50),
+   menge      VARCHAR(50),
+   prozent    VARCHAR(50),
+   zeitpunkt  VARCHAR(50),
+   latlng     VARCHAR(50),
+   PRIMARY KEY (id)
+);
+
+CREATE TABLE challenge
+(
+   id         INT           NOT NULL AUTO_INCREMENT,
+   nutzer_id  VARCHAR(50),
+   freund_id  VARCHAR(50),
+   text       TEXT,
+   PRIMARY KEY (id)
+);

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_trinken" translatable="true">Drink</string>
+    <string name="hint_drink" translatable="true">Name of Drink</string>
+    <string name="hint_menge" translatable="true">Amount</string>
+    <string name="hint_percentage" translatable="true">Percentage</string>
+    <string name="hint_time" translatable="true">Time</string>
+    <string name="Scannen" translatable="true">Scan</string>
+    <string name="danke_text">Thanks to:</string>
+    <string name="hint_geschlecht">Sex</string>
+    <string name="hint_gewicht">Weight</string>
+    <string name="txt_abmelden">Log out</string>
+    <string name="txt_offline_modus">Offline Mode</string>
+    <string name="txt_speichern">Safe</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_register">Register</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_bar">To the Bar</string>
+    <string name="btn_challenge">Challenge</string>
+    <string name="btn_uebersicht">Overview</string>
+    <string name="txt_hat_bereits_account">You already have an Account?</string>
+    <string name="btn_alles_loeschen">Delete All</string>
+    <string name="txt_lass_den_code_scannen">Let your Friends scan this</string>
+    <string name="txt_englisch">English</string>
+    <string name="title_warnung">Warning</string>
+    <string name="Warnung">Do not use this tool to decide whether you are allowed to drive a vehicle or not. DrunkMerlin provides approximate values for healthy adults. An exact calculation of the blood alcohol concentration depends on the amount, duration and the temporal distribution of alcohol consumption as well as individual physiological characteristics. Illnesses or medication can also affect blood alcohol levels.</string>
+    <string name="text_warnung_speichern">A weight and gender must be specified.</string>
+    <string name="Sex_M">male</string>
+    <string name="Sex_W">female</string>
+    <string name="txt_und">and</string>
+    <string name="txt_wieder_nuechtern">sober again</string>
+    <string name="txt_hab_anscheinend">Apparently I have</string>
+    <string name="txt_alkohol_im_blut">alcohol in my blood</string>
+    <string name="txt_schau_die_app_an">Take a look at the app!</string>
+    <string name="btn_Fertig">Ready</string>
+    <string name="btn_abbrechen">cancel</string>
+    <string name="app_name">DrunkMerlin</string>
+    <string name="txt_zuruecksetzen">Reset?</string>
+    <string name="txt_der_komplette_alkohol_ist_weg">It appears that the alcohol is completely digested. The best thing to do is to start again.</string>
+    <string name="txt_noch_nicht">Cancel</string>
+    <string name="txt_alles_loeschen">Do you want to delete everything you\'ve drunk so far?</string>
+    <string name="txt_entfernen">" "</string>
+    <string name="txt_soll">Remove</string>
+    <string name="txt_von_freundesliste_entfernen">from the Friend\'s list?</string>
+    <string name="title_teilen">Share?</string>
+    <string name="txt_teilen">You seem to like the app. Do you want your friends to share in it?</string>
+    <string name="txt_nie">Never!</string>
+    <string name="btn_zurueck">Back</string>
+    <string name="txt_ihavenever">I have never ...</string>
+    <string name="title_send">Send?</string>
+    <string name="txt_nachricht_senden1">Do you realy want to send this message to</string>
+    <string name="txt_nachricht_senden2">\?</string>
+    <string name="txt_deleteAccount">Delete Account</string>
+    <string name="txt_account_loeschen">Do you want to permanently delete your account and all associated data?</string>
+</resources>

@@ -1,0 +1,3 @@
+create database drunkmerlin;
+CREATE USER 'drunkmerlin'@'%' IDENTIFIED BY '<Password>';
+GRANT ALL PRIVILEGES ON drunkmerlin.* TO 'drunkmerlin'@'%' WITH GRANT OPTION;

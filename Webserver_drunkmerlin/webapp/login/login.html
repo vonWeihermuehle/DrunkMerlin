@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Drunk Sally</title>
+		<style>
+
+		@media (max-width: 400px) {
+			.banner {
+				width: 90%;
+				margin: 0 auto;
+				text-align: center;
+				-webkit-appearance: none;
+			}
+			.login-form{
+				width: 90%;
+				margin: 0 auto;
+				font-family: Tahoma, Geneva, sans-serif;
+				-webkit-appearance: none;
+			}
+		}
+
+		@media (min-width: 401px) {
+			.banner {
+				width: 50%;
+				margin: 0 auto;
+				text-align: center;
+				-webkit-appearance: none;
+			}
+			.login-form{
+				width: 50%;
+				margin: 0 auto;
+				font-family: Tahoma, Geneva, sans-serif;
+				-webkit-appearance: none;
+			}
+		}
+
+
+		.login-form h1 {
+			text-align: center;
+			color: #4d4d4d;
+			font-size: 24px;
+			padding: 20px 0 20px 0;
+			-webkit-appearance: none;
+		}
+		.login-form input[type="password"],
+		.login-form input[type="text"] {
+			width: 100%;
+			padding: 15px;
+			border: 1px solid #dddddd;
+			margin-bottom: 15px;
+			box-sizing:border-box;
+			-webkit-appearance: none;
+		}
+		.login-form input[type="submit"] {
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			margin: 2px;
+			-webkit-appearance: none;
+		}
+		.btn{
+			width: 100%;
+			padding: 15px;
+			background-color: #535b63;
+			border: 0;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+			color: #ffffff;
+			margin: 2px;
+			-webkit-appearance: none;
+		}
+
+
+		div#dsgvo_hinweis {
+			position: Fixed;
+			bottom: 0px;
+			left: 0px;
+			width: 100%;
+			z-index: 1000;
+			text-align: Center;
+			cursor: Default;
+			background-color: rgba(234, 239, 241, 0.9);
+			border-top: Solid 1px rgb(168, 188, 198);
+		}
+
+		a.dsgvo_hinweis_button {
+			text-decoration: None;
+			padding: 7px;
+			background-color: rgb(0, 191, 0);
+			color: rgb(255, 255, 255);
+			margin-right: 10px;
+		}
+
+		a.dsgvo_button:hover {
+			background-color: rgb(0, 166, 0);
+		}
+		</style>
+
+		<link rel="shortcut icon" type="image/x-icon" href="/static/Bilder/icon-web.ico">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	</head>
+	<body>
+		<script>
+			var loginfailed = location.search.split('loginfailed=')[1];
+			if(loginfailed == '1'){
+				alert("Login gescheitert: Falscher Benutzername oder Passwort");
+			}
+			/*var x = "Total Width: " + screen.width;
+			var y = "Total Width: " + screen.height;
+			alert(x + " " + y);
+			*/
+
+
+			window.addEventListener("DOMContentLoaded", function () {
+				if ('localStorage' in window &&
+					window['localStorage'] !== null) {
+				if (window.localStorage.getItem("DSGVO")) {
+					document.getElementById("dsgvo_hinweis").style.display="none";
+				}
+				}
+				});
+
+          function akzeptieren() {
+          if ('localStorage' in window &&
+              window['localStorage'] !== null) {
+          window.localStorage.setItem("DSGVO", "true");
+          document.getElementById("dsgvo_hinweis").style.display="none";
+          }
+          }
+		</script>
+
+		<div class="banner">
+					<img class="banner" src="/static/Bilder/Funktionsgrafik.png">
+		</div>
+
+
+		<div class="login-form">
+
+			<form action="/login/auth" method="POST">
+				<input type="text" name="username" placeholder="Username" required>
+				<input type="password" name="password" placeholder="Passwort" required>
+			</br>
+				<input type="submit" value="Login">
+				<a href="/register"><input type="button" class="btn" value="Registrieren"></a>
+			</form>
+		</div>
+
+
+
+		<div id="dsgvo_hinweis">
+
+			<p>
+			Diese Seite verwendet Cookies. Wenn du dich weiterhin auf dieser Seite aufhältst, akzeptierst du unseren Einsatz von Cookies.
+			</p>
+			
+			<p>
+			<a href="javascript:akzeptieren();" class="dsgvo_hinweis_button">Akzeptieren</a>
+			</p>
+		
+		</div>
+
+
+
+	</body>
+</html>
